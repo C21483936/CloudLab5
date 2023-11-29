@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'cloudf.default'
+    environment: 'GavLab5.default'
     strategy:
       runOnce:
         deploy:
