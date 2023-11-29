@@ -1,7 +1,7 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudf 
+  name: cloudf
 spec:
   replicas: 1
   selector:
@@ -10,10 +10,12 @@ spec:
   template:
     metadata:
       labels:
-        app: cloudf 
+        app: cloudf
     spec:
       containers:
-        - name: cloudf 
+        - name: cloudf
           image: gavlab5.azurecr.io/cloudf
           ports:
-          - containerPort: 80
+            - containerPort: 80
+      imagePullSecrets:
+        - name: gavinsecrets
